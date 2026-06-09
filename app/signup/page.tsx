@@ -1,57 +1,87 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-100">
-      <nav className="bg-white shadow px-6 py-4 flex justify-between">
-        <h1 className="text-2xl font-bold">🏠 SplitNest</h1>
+    <div className="min-h-screen bg-gray-100 flex">
+      {/* Sidebar */}
+      <aside className="w-64 bg-white shadow-lg p-6">
+        <h1 className="text-2xl font-bold mb-10">🏠 SplitNest</h1>
 
-        <button className="bg-black text-white px-4 py-2 rounded-lg">
-          Create Room
-        </button>
-      </nav>
+        <nav className="space-y-4">
+          <div className="p-3 rounded-lg bg-gray-100 cursor-pointer">
+            Dashboard
+          </div>
 
-      <section className="max-w-5xl mx-auto p-6">
-        <h2 className="text-3xl font-bold mb-6">
-          Expense Dashboard
-        </h2>
+          <div className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+            Rooms
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-4 mb-8">
+          <div className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+            Expenses
+          </div>
+
+          <div className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+            Settlements
+          </div>
+
+          <div className="p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+            Profile
+          </div>
+        </nav>
+      </aside>
+
+      {/* Main Content */}
+      <main className="flex-1 p-8">
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-3xl font-bold">
+            Dashboard
+          </h2>
+
+          <button className="bg-black text-white px-4 py-2 rounded-lg">
+            + Add Expense
+          </button>
+        </div>
+
+        {/* Stats */}
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="bg-white p-6 rounded-xl shadow">
-            <h3 className="text-gray-500">Total Expenses</h3>
-            <p className="text-3xl font-bold">₹12,500</p>
+            <p className="text-gray-500">Total Expenses</p>
+            <h3 className="text-3xl font-bold mt-2">
+              ₹12,500
+            </h3>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow">
-            <h3 className="text-gray-500">You Owe</h3>
-            <p className="text-3xl font-bold text-red-500">
+            <p className="text-gray-500">You Owe</p>
+            <h3 className="text-3xl font-bold text-red-500 mt-2">
               ₹850
-            </p>
+            </h3>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow">
-            <h3 className="text-gray-500">You Are Owed</h3>
-            <p className="text-3xl font-bold text-green-500">
+            <p className="text-gray-500">You Are Owed</p>
+            <h3 className="text-3xl font-bold text-green-500 mt-2">
               ₹1,200
-            </p>
+            </h3>
           </div>
         </div>
 
+        {/* Recent Expenses */}
         <div className="bg-white rounded-xl shadow p-6">
           <h3 className="text-xl font-bold mb-4">
             Recent Expenses
           </h3>
 
           <div className="space-y-4">
-            <div className="flex justify-between">
+            <div className="flex justify-between border-b pb-3">
               <span>🍕 Pizza Night</span>
               <span>₹600</span>
             </div>
 
-            <div className="flex justify-between">
+            <div className="flex justify-between border-b pb-3">
               <span>🛒 Groceries</span>
               <span>₹2,300</span>
             </div>
 
-            <div className="flex justify-between">
+            <div className="flex justify-between border-b pb-3">
               <span>💡 Electricity Bill</span>
               <span>₹1,500</span>
             </div>
@@ -62,7 +92,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </main>
+    </div>
   );
 }
