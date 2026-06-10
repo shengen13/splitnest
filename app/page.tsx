@@ -36,7 +36,12 @@ export default function Home() {
           </h2>
 
           <button className="bg-black text-white px-4 py-2 rounded-lg">
-            + Add Expense
+            <a
+  href="/create-room"
+  className="bg-black text-white px-4 py-2 rounded-lg"
+>
+  + Create Room
+</a>
           </button>
         </div>
 
